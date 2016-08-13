@@ -1,4 +1,4 @@
-		<table>
+		<table width="1">
 			<thead>
 				<th>Student Name</th>
 				<th>Student Roll Number</th>
@@ -16,9 +16,9 @@
 			{
 ?>			
 				<tr>
-					<td><?php echo $row['name']; ?></td>
-					<td><?php echo $row['rollno']; ?></td>
-					<td><?php echo $row['class']; ?></td>
+					<td><?php echo $row['Name']; ?></td>
+					<td><?php echo $row['RollNo']; ?></td>
+					<td><?php echo $row['Class']; ?></td>
 					<td><?php echo $row['password']; ?></td>
 				</tr>
 <?php			
