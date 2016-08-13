@@ -7,7 +7,7 @@
 	updateSession($cls,$rollno,$password);
 	if(checkStudent($cls, $rollno, $password)==1)
 	{
-		header('location: ../view/SelectCareer.php');
+		header('Location: ../view/Instructions.php');
 	}
 	else
 	{

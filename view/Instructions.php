@@ -18,9 +18,8 @@ body
 </style>
 </head>
 <body>
-<form action='../view/QuestionShow.php' method='post'>
-<fieldset>
 <form action='../controller/SelectCareer.php' onsubmit='return Check3Only()'>
+<fieldset>
         <textarea readonly rows="8" cols="60">Instructions:
 
 1.There are 30 Questions in the Quiz

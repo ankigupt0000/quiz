@@ -27,16 +27,7 @@
 			<a href="QuizQuestion.php">Add questions to quiz</a>
 		</li>
 		<li>
-			<a href="activateQuiz.php">Select Active Quiz</a>
-		</li>
-		<li>
-			<a href="addCareer.php">Add New Career Option</a>
-		</li>
-		<li>
-			<a href="careerQuestion.php">Add questions to career </a>
-		</li>
-		<li>
-			<a href="viewCareerOption.php">View career questions </a>
+			<a href="activateQuiz.php">Manage Quiz</a>
 		</li>
 		<li>&nbsp;
 		</li>
