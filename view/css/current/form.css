@@ -1,0 +1,28 @@
+label {
+	width: 20em;
+	float: left;
+	text-align: right;
+	margin-right: 2em;
+	display: block;
+}
+.submit {
+	margin-left:22em;
+}
+input, select, textarea {
+	background-color:#BEF7F5;
+	border-width:2px;
+	border-color:#0000FF;
+}
+#error{
+	font-size:.8em;
+	color:red;
+	margin-left:22em;
+}
+.error{
+	color:red;
+	font-size:.8em;
+}
+.no_error{
+	color:green;
+	font-size:1em;
+}
