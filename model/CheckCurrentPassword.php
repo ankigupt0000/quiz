@@ -9,7 +9,6 @@
 
 <?php
 		require_once('../model/db.php');
-		function GetPassword(){
 			$database_obj=connectDB();
 			$sql="select * from student";
 			//echo $sql;
@@ -24,7 +23,6 @@
 				</tr>
 <?php			
 			}
-		}
 ?>
 			</tbody>
 		</table>
