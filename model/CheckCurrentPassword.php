@@ -16,10 +16,10 @@
 			{
 ?>			
 				<tr>
-					<td><?php echo $quesrow['name']; ?></td>
-					<td><?php echo $quesrow['rollno']; ?></td>
-					<td><?php echo $quesrow['class']; ?></td>
-					<td><?php echo $quesrow['password']; ?></td>
+					<td><?php echo $row['name']; ?></td>
+					<td><?php echo $row['rollno']; ?></td>
+					<td><?php echo $row['class']; ?></td>
+					<td><?php echo $row['password']; ?></td>
 				</tr>
 <?php			
 			}
