@@ -1,5 +1,5 @@
 <?php
-$app['site_name']='Quiz Portal';
-$app['site_url']='http://localhost';
+$app['site_name']='Vaanika Solutions';
+$app['site_url']='http://vaanikasolutions.16mb.com/';
 $app['theme']='current';
 ?>
