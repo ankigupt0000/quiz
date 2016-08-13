@@ -71,7 +71,8 @@ document.getElementById('clock').innerHTML="TIME: "+h+":"+m+":"+s;
 }
 else
 {
-confirmSubmit();
+//confirmSubmit();
+alert("Timout !!!");
 document.getElementById('quiz').submit();
 }
 t=setTimeout(function(){startTime(hr,min)},500);
@@ -192,6 +193,6 @@ echo "--------------------------------------------------------------------------
 </br>
 </form>
 <script type='text/javascript'>
-startTime(0,1);
+startTime(0,<?php echo $row['Duration']?>);
 </script>
 </body>
