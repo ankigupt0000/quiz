@@ -15,6 +15,9 @@
 			<a href="UpdatePasswords.php">Change Student Password</a>
 		</li>
 		<li>
+			<a heref="CheckCurrentPassword.php">Check Password</a>
+		</li>
+		<li>
 		&nbsp;
 		</li>
 		<li>

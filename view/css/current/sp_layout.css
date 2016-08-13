@@ -1,6 +1,10 @@
 @import url("menu.css");
 body
 {
+	background-image:url('test.jpg');
+	background-repeat:no-repeat;
+	background-size:1024 768;
+	background-color:#BDCDCA;
 }
 #header{
 	text-align:center;
