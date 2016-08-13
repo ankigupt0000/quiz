@@ -15,9 +15,9 @@ label {
 }
 body
 {
-	background-image:url('good.jpg');
+	background-image:url('test.jpg');
 	background-repeat:no-repeat;
-	background-size:100%;
+	background-size:1024 768;
 	background-color:#BDCDCA;
 }
 input, select, textarea {
