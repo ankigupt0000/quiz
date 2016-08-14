@@ -27,12 +27,12 @@ session_start();
 					?>
 					</div>
                                         <legend>Student Login Form</legend>
-					<p>
+					<!--<p>
 					<label for='cls'>Select Your Class:</label>
 					<select name='cls'>
 						<?php listClasses(); ?>
 					</select>
-					</p>
+					</p>-->
                                         <p>
                                         <label for="uname">Student Roll No:</label>
                                         <input type="text" name="rollno" id="rollno" />

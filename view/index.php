@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 
 	<head>
-		<title>Online Quiz Portal::Home</title>
+		<title>Vaanika Solutions::Quiz</title>
 		<?php include_once "meta.php" ?>
 	</head>
 	<body>

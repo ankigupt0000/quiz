@@ -1,10 +1,10 @@
 <?php
 	session_start();
 	require_once('../model/db.php');
- 	function checkStudent($cls, $rollno, $passwd)
+ 	function checkStudent($rollno, $passwd)
 	{
 		$db_obj=connectDB();
-		$sql="Select count(*) as cnt from student where Class='".$cls."' and RollNo='".$rollno."' and password ='".$passwd."';";
+		$sql="Select count(*) as cnt from student where RollNo='".$rollno."' and password ='".$passwd."';";
 		echo $sql;
 		foreach($db_obj->query($sql) as $row)
 		{
@@ -12,10 +12,10 @@
 		}
 		return 0;
 	}
-	function updateSession($cls, $rollno, $passwd)
+	function updateSession($rollno, $passwd)
 	{
 		$db_obj=connectDB();
-		$sql="Select * from student where Class='".$cls."' and RollNo='".$rollno."' and password ='".$passwd."';";
+		$sql="Select RollNo,password from student where Class='".$cls."' and RollNo='".$rollno."' and password ='".$passwd."';";
 		foreach($db_obj->query($sql) as $row)
 		{
 			$_SESSION['studid']=$row['StudentId'];
