@@ -1,6 +1,6 @@
 <html>
 <head>
-<title> Instructions for the page</title>
+<title> Vaanika Solution: Quiz Instructions</title>
 <style type='text/css'>
 fieldset {
 	margin-left: 25%; 

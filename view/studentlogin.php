@@ -5,7 +5,7 @@ session_start();
 <html>
 	<head>
 		<title>
-			Student Portal
+			Vaanika Solutions Quiz
 		</title>
 		<?php 
 			include_once('../view/sp_meta.php');
