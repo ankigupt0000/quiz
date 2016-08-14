@@ -15,6 +15,7 @@ session_start();
 		<link rel="stylesheet" type="text/css" href="css/current/sp_form.css" />	
 	</head>              
 	<body>
+		<?php include_once "header.php" ?>
 			<form action="../controller/studentlogin.php" method="post">
                                 <fieldset>
 					<div class='error'>
@@ -26,7 +27,7 @@ session_start();
 						}
 					?>
 					</div>
-                                        <legend>Student Login Form</legend>
+                                        <legend>Vaanika Quiz</legend>
 					<!--<p>
 					<label for='cls'>Select Your Class:</label>
 					<select name='cls'>
