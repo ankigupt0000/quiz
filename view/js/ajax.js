@@ -9,8 +9,8 @@ function stateChanged()
          alert ("Requested URL is not found.");
        } else if (xmlHttp.status == 403) {
          alert("Access denied.");
-       } else
-         alert("status is " + xmlHttp.status);	
+       } //else
+         //alert("status is " + xmlHttp.status);	
 	}
 	else if(xmlHttp.readyState==1)
 	{
