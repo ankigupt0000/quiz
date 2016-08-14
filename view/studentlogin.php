@@ -5,7 +5,7 @@ session_start();
 <html>
 	<head>
 		<title>
-			Vaanika Solutions Quiz
+			Vaanika Solutions Quiz 
 		</title>
 		<?php 
 			include_once('../view/sp_meta.php');
