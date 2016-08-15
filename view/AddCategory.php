@@ -18,7 +18,7 @@ session_start();
 		<?php include_once "header.php" ?>
 		<?php include_once "menu.php" ?>
 		<div id="content">
-			<form action="../controller/addCareer.php">
+			<form action="../controller/AddCategory.php">
 				<fieldset>
 					<legend>Add Quiz Category</legend>
 					<input type='hidden' name='image_id' id='image_id' />
