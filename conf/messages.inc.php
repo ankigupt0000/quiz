@@ -43,5 +43,5 @@
  $msg[30]="Password updated successfully to &lt;roll_no&gt;_".$spass;
  $msg[31]="Question inserted successfully";
  $msg[32]="Quiz ".$sqname." activated";
- $msg[33]="Carrer successfully added";
+ $msg[33]="New Quiz Category successfully added";
 ?>

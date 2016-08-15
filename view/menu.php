@@ -21,6 +21,9 @@
 		&nbsp;
 		</li>
 		<li>
+			<a href="AddCategory.php">Add Quiz Category</a>
+		</li>
+		<li>
 			<a href="CreateQuiz.php">Create Quiz</a>
 		</li>
 		<li>
