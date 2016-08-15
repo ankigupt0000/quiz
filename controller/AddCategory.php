@@ -5,5 +5,5 @@
 	
 	$array=$_REQUEST;
 	addCategory($array['name']);
-	header('location: ../view/addCategory.php');
+	//header('location: ../view/addCategory.php');
 ?>
