@@ -3,7 +3,7 @@ require_once('../model/db.php');
 function associateQues($quizid,$quesid)
 {
 	$database_obj=connectDB();
-	$sql="insert into quizquestion values ('".mysql_real_escape_string($quizid)."','".mysql_real_escape_string($quesid)."');";
+	$sql="insert into quizquestion values ('".$quizid."','".$quesid."');";
 	$database_obj->query($sql);
 }
 function deleteQues($quizid)
