@@ -1,9 +1,9 @@
 <?php
 	session_start();
 	include_once('../model/studentlogin.php');
-	$cls=mysql_real_escape_string($_REQUEST['cls']);
-	$rollno=mysql_real_escape_string($_REQUEST['rollno']);
-	$password=mysql_real_escape_string($_REQUEST['passwd']);
+	$cls=$_REQUEST['cls'];
+	$rollno=$_REQUEST['rollno'];
+	$password=$_REQUEST['passwd'];
 	updateSession($rollno,$password);
 	if(checkStudent($rollno, $password)==1)
 	{

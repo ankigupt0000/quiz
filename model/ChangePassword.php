@@ -9,7 +9,7 @@
                 }
 		if($exist==1)
 		{
-			$sql="update admin set Passwd='".$new_passwd."'";
+			$sql="update admin set Passwd='".$new_passwd."' where UserName='".$uname."'";
 			$database_obj->query($sql);
 		}
 	}	
