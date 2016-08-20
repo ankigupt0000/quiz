@@ -1,6 +1,7 @@
 <?php
     //error_reporting(0);
     session_start();
+	include_once("CheckLoginHeader.php");
     require_once('../model/db.php');
 	$database_obj=connectDB();
 ?>

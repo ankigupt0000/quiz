@@ -1,3 +1,4 @@
+<?php include_once("CheckLoginHeader.php"); ?>
 <head>
 <style media = "screen" type="text/css">
 fieldset

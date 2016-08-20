@@ -1,5 +1,5 @@
 <?php 
-
+include_once("CheckLoginHeader.php");
 error_reporting(0);
 session_start();
 ?>

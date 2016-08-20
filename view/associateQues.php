@@ -1,3 +1,4 @@
+<?php include_once("CheckLoginHeader.php"); ?>
 <html>
 <head>
 <script language="javascript">

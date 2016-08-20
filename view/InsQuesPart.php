@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php 
+session_start();
+include_once("CheckLoginHeader.php"); 
+?>
 <p>
 <?php if(isset($_SESSION['image_id'])) { ?>
  Question Image  <a target='_blank' href='../controller/remove_img.php?id=image_id'>Remove Image</a> 
