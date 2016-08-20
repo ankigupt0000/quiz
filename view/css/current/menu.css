@@ -1,7 +1,14 @@
-#menu ul{
-	float:left;
-	width: 200px;
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
 }
+
 
 #menu ul li{
 	display:block;
@@ -10,15 +17,21 @@
 	background-color:#BEF7F5;
 }
 
-#menu ul li a{ 
-	text-decoration: none;
-	
+#menu ul li a.active {
+    background-color: #4CAF50;
+    color: white;
 }
+
 
 #menu ul li a:visited{
 
 }
 
-#menu ul li:hover, #menu ul li .current{
-	background-color:#0b75b2; 
+#menu li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
 }
+
+
+
+
