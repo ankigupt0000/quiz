@@ -16,8 +16,8 @@ session_start();
 	</head>              
 	<body>
 		<?php include_once "header.php" ?>
-			<form action="../controller/studentlogin.php" method="post">
-                                <fieldset>
+			<form action="../controller/studentlogin.php" method="post" title="StudentLogin">
+                                <fieldset><legend>Vaanika Quiz</legend>
 					<div class='error'>
 					<?php
 						if(isset($_SESSION['msg']))
@@ -27,7 +27,7 @@ session_start();
 						}
 					?>
 					</div>
-                                        <legend>Vaanika Quiz</legend>
+                                        
 					<!--<p>
 					<label for='cls'>Select Your Class:</label>
 					<select name='cls'>
@@ -35,7 +35,7 @@ session_start();
 					</select>
 					</p>-->
                                         <p>
-                                        <label for="uname">Student Roll No:</label>
+                                        <label for="rollno">Student Roll No:</label>
                                         <input type="text" name="rollno" id="rollno" />
                                         </p>
 
