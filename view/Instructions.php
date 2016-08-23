@@ -1,4 +1,4 @@
-<?php include_once("CheckLoginHeader.php"); ?>
+<?php include_once("CheckStudentLogin.php"); ?>
 <html>
 <head>
 <title> Vaanika Solution: Quiz Instructions</title>

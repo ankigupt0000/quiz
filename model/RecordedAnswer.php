@@ -9,7 +9,7 @@ $sql="delete from result where StudentId=".$_SESSION['studid']." and QuizId=".$_
 echo $sql;
 $database_obj->query($sql);
 for($i=1;;$i++)
-   {
+{
     if(isset($_POST['que'.$i]))
     {
 	   if(isset($_POST['ans'.$i]))
@@ -17,15 +17,11 @@ for($i=1;;$i++)
 	    $sql="insert into result(StudentId,QuestionId,SelectedAns,QuizId) values ('".$_SESSION['studid']."','".$_POST['que'.$i]."','".$_POST['ans'.$i]."','".$_SESSION['quizid']."')";
 	    $database_obj->query($sql);
 	    }
-	
-	header('location: ../view/DisplayResult.php');
     }
- 
-   else
-   {
-    break;
-   } 
- 
- }
-
+    else
+    {
+     break;
+    } 
+}
+header('location: ../view/DisplayResult.php');
 ?>

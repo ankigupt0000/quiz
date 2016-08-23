@@ -15,7 +15,7 @@
 	function updateSession($rollno, $passwd)
 	{
 		$db_obj=connectDB();
-		$sql="Select RollNo,password from student where Class='".$cls."' and RollNo='".$rollno."' and password ='".$passwd."';";
+		$sql="Select StudentId,RollNo,password from student where RollNo='".$rollno."' and password ='".$passwd."';";
 		foreach($db_obj->query($sql) as $row)
 		{
 			$_SESSION['studid']=$row['StudentId'];

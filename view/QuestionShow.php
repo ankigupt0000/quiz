@@ -1,4 +1,4 @@
-<?php include_once("CheckLoginHeader.php"); ?>
+<?php include_once("CheckStudentLogin.php"); ?>
 <head>
 <style media = "screen" type="text/css">
 fieldset

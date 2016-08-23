@@ -6,7 +6,7 @@
 	function findStudent($cls, $rollno)
 	{
 		$db_obj=connectDB();
-		$sql="Select * from student where Class='".$cls."' and RollNo='".$rollno."';";
+		$sql="Select * from student where RollNo='".$rollno."';";
 		//echo $sql;
 		foreach($db_obj->query($sql) as $row)
 		{
@@ -15,10 +15,10 @@
 		return 0;
 	}
 	
-	$cls=mysql_real_escape_string($_REQUEST['cls']);
+	$cls=$_REQUEST['cls'];
 	//echo $cls;
 	//echo "</br>";
-	$rollno=mysql_real_escape_string($_REQUEST['rollno']);
+	$rollno=$_REQUEST['rollno'];
 	//echo $rollno;
 	//echo "</br>";
 	//$studentid=findStudent($cls, $rollno);;
@@ -28,5 +28,5 @@
 	$_SESSION['quizid']=$_REQUEST['quizid'];
 	//echo $_SESSION['studid'];
 	//echo "<br/>".$_SESSION['quizid'];
-	header('location: ../view/showResult.php');
+	header('location: ../view/DisplayResult.php');
 ?>
