@@ -25,7 +25,12 @@ body
 	background-color:#BDCDCA;
 	
 }
+#typelink {
+	position:absolute;
+	left:30%;
+}
 </style>
+<script type="text/javascript" src="js/ajax.js" ></script>
 <script type='text/javascript'>
 	function confirmSubmit()
 	{
@@ -33,7 +38,10 @@ body
 	}
 </script >
 <script type='text/javascript'>
-var start=new Date();
+var start=<?php if(isset($_SESSION['date'])){ echo "new Date('".$_SESSION['date']."')"; } else {echo "new Date();";} ?>
+//alert(start);
+//document.getElementById('date').value=start;
+//callServer('../controller/SetSessionTime.php',new array('date'),null);
 var sh=start.getHours();
 var sm=start.getMinutes();
 var ss=start.getSeconds();
@@ -68,11 +76,10 @@ m=checkTime(m);
 s=checkTime(s);
 if(tflag != 1)
 {
-document.getElementById('clock').innerHTML="TIME: "+h+":"+m+":"+s;
+document.getElementById('clock').innerHTML="TIME: "+h+":"+m+":"+s+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Duration: "+min+" minutes";
 }
 else
 {
-//confirmSubmit();
 alert("Timout !!!");
 document.getElementById('quiz').submit();
 }
@@ -95,9 +102,9 @@ return i;
 <form action='../model/RecordedAnswer.php' method='post' name='quiz' id='quiz' onsubmit='' >
 <fieldset>
 <div id="clock"></div>
+<input type='hidden' name='date' id="date" />
 <?php
     error_reporting(0);
-    session_start();
     require_once('../model/db.php');
     $database_obj=connectDB();
     $sql="select QuizId from quiz where quiz.Active=1";
@@ -193,6 +200,7 @@ echo "--------------------------------------------------------------------------
 </fieldset>
 </br>
 </form>
+<a href="TypingTutor.html" target="_" id="typelink">Try our Typing Tutor page to improve your typing speed</a>
 <script type='text/javascript'>
 startTime(0,<?php echo $row['Duration']?>);
 </script>

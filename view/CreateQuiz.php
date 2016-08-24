@@ -41,6 +41,11 @@ session_start();
 					<input type="text" name="desc" id="desc" onblur=''/>
 					<span class='error' id='val_desc'></span>
 					</p>
+					<p>
+					<label for="duration">Duration in Minutes</label>
+					<input type="text" name="duration" id="duration" onblur=''/>
+					<span class='error' id='val_duration'></span>
+					</p>
 					<p class='submit'>
 					<input type='Submit' name='Submit' id='Submit' />
 					</p>						

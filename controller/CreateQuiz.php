@@ -4,6 +4,6 @@
 	include_once('../model/CreateQuiz.php');
 	
 	$array=$_REQUEST;
-	CreateQuiz($array['name'],$array['desc']);
+	CreateQuiz($array['name'],$array['desc'],$array['duration']);
 	header('location: ../view/CreateQuiz.php');
 ?>
