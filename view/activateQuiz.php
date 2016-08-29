@@ -42,6 +42,9 @@ include_once("../conf/messages.inc.php");
 				echo "<td>";
 				echo $row['Description'];
 				echo "</td>";
+				echo "<td>";
+				echo "<a href='editQuiz.php?id=".$row['QuizId']."'>Edit</a>";
+				echo "</td>";
 				echo "</tr>";
 			}
 		?>
