@@ -44,4 +44,6 @@
  $msg[31]="Question inserted successfully";
  $msg[32]="Quiz ".$sqname." activated";
  $msg[33]="New Quiz Category successfully added";
+ $msg[34]="Updation completed successfully";
+ $msg[35]="Quiz created successfully";
 ?>
