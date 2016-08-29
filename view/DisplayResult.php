@@ -4,8 +4,13 @@
     session_start();
     //header("Content-type: image/svg+xml");
     require_once('../model/db.php');
-	$correct=0; $incorrect=0;
+	$correct=0; $incorrect=0; $totalques=0;
     $database_obj=connectDB();
+	$sql="SELECT count(*) as cnt from quizquestion where QuizId='".$_SESSION['quizid']."'";
+	foreach($database_obj->query($sql) as $row)
+	{
+		$totalques=$row['cnt'];
+	}
 	$sql="SELECT count(*) as cnt FROM result,questionbase WHERE studentid=".$_SESSION['studid']." and quizid = ".$_SESSION['quizid']." and questionid=queid and ans=selectedans";
 	foreach($database_obj->query($sql) as $row )
     {
@@ -16,25 +21,35 @@
     {
 		$incorrect=$row['cnt'];
 	}
+	$unattempted=$totalques-($correct + $incorrect);
 ?>
-<html>
-<head>
-<style type='text/css'>
-#result {
-	font-size:40px;
-	position:absolute;
-	left:30%;
-	top:50%;
-}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+	<head>
+		<title>Online Quiz Portal::Home</title>
+		<?php include_once "meta.php" ?>
+		<?php include_once('../model/studentlogin.php'); ?>
+		<?php include_once "../conf/messages.inc.php" ?>
+		<style type='text/css'>
+		#result {
+			font-size:40px;
+			position:absolute;
+			left:30%;
+			top:30%;
+		}
 </style>
-<title> Result </title>
-</head>
+	</head>
 <body>
+<?php //include_once "header.php" ?>
+<!--<?php //include_once "menu.php" ?>-->
 <div id="result">
 <?php
-	echo ("Your score for the quiz is ");
-	echo(round($correct/($correct+$incorrect)*100,2));
-	echo(" percent");
+	echo "Number of correct answers: $correct <br/>";
+	echo "Number of incorrect answers: $incorrect <br/>";
+	echo "Number of unattempted questions: $unattempted <br/>";
+	echo "<a href='QuestionShow.php'>Reattempt Quiz</a>";
+	//echo(round($correct/($correct+$incorrect)*100,2));
 ?>
 </div>
 </body>
