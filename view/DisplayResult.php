@@ -54,6 +54,7 @@
 </div>
 </body>
 </html>
+<?php unset($_SESSION['studid']); ?>
 <?php
 /*
 $rad=150;
