@@ -7,6 +7,7 @@
 	updateSession($rollno,$password);
 	if(checkStudent($rollno, $password)==1)
 	{
+		$_SESSION['rollno']=$rollno;
 		header('Location: ../view/QuestionShow.php');
 	}
 	else
