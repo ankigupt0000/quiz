@@ -1,6 +1,7 @@
 <?php
 error_reporting(0);
 session_start();
+include_once("../model/activateQuiz.php");
 ?>
 <html>
 	<head>
@@ -34,6 +35,9 @@ session_start();
 						<?php listClasses(); ?>
 					</select>
 					</p>-->
+										<p>
+										<label for="QName">Quiz Name: </label>
+										<input type="text" name="QName" id="QName" disabled="disabled" value="<?php echo getQuizName(); ?>" ></input> 
                                         <p>
                                         <label for="rollno">Student Roll No:</label>
                                         <input type="text" name="rollno" id="rollno" />

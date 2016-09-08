@@ -29,6 +29,14 @@ body
 	position:absolute;
 	left:30%;
 }
+.header {
+	font-size:30;
+	align:center;
+}
+.fix {
+	position:fixed;
+	//background-color:white;
+}
 </style>
 <script type="text/javascript" src="js/ajax.js" ></script>
 <script type='text/javascript'>
@@ -76,15 +84,14 @@ m=checkTime(m);
 s=checkTime(s);
 if(tflag != 1)
 {
-document.getElementById('clock').innerHTML="TIME: "+h+":"+m+":"+s+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Duration: "+min+" minutes";
+document.getElementById('clock').innerHTML="TIME: "+h+":"+m+":"+s+"<br/>Duration: "+min+" minutes";
+t=setTimeout(function(){startTime(hr,min)},500);
 }
 else
 {
 alert("Timout !!!");
 document.getElementById('quiz').submit();
 }
-t=setTimeout(function(){startTime(hr,min)},500);
-
 }
 
 function checkTime(i)
@@ -99,23 +106,26 @@ return i;
 </head>
 
 <body>
-<form action='../model/RecordedAnswer.php' method='post' name='quiz' id='quiz' onsubmit='' >
-<fieldset>
-<div id="clock"></div>
-<input type='hidden' name='date' id="date" />
 <?php
     error_reporting(0);
     require_once('../model/db.php');
     $database_obj=connectDB();
-    $sql="select QuizId from quiz where quiz.Active=1";
+    $sql="select QuizId,QuizName from quiz where quiz.Active=1";
     foreach($database_obj->query($sql) as $row )
     {
 	$_SESSION['quizid']= $row['QuizId'];
+	$_SESSION['quizname']=$row['QuizName'];
     }	
     $sql  = "select * from quiz,questionbase,quizquestion where quiz.QuizId=quizquestion.QuizId and questionbase.queid=quizquestion.QuestionId and quiz.Active=1";
     $count=0;
-	
-    foreach($database_obj->query($sql) as $row )
+?>
+<form action='../model/RecordedAnswer.php' method='post' name='quiz' id='quiz' onsubmit='' >
+<div id="clock" class="fix"></div>
+<fieldset>
+<div id="rollno" class="header">Welcome Student: <?php echo $_SESSION['rollno']; ?> </div>
+<div id="Name" class="header">Quiz: <?php echo $_SESSION['quizname']; ?> </div>
+<input type='hidden' name='date' id="date" />
+<?php    foreach($database_obj->query($sql) as $row )
     {
         echo "<br/>";
 		echo "<br/>";
@@ -192,7 +202,7 @@ return i;
 		<?php
 		echo "</br>";
 		}
-echo "---------------------------------------------------------------------------------------------------------------------------------------------------";
+echo "--------------------------------------------------------------------------------------------------------------------------------";
 }	
 ?>
 <br/>
@@ -202,6 +212,6 @@ echo "--------------------------------------------------------------------------
 </form>
 <a href="TypingTutor.html" target="_" id="typelink">Try our Typing Tutor page to improve your typing speed</a>
 <script type='text/javascript'>
-startTime(0,<?php echo $row['Duration']?>);
+startTime(0,<?php echo $row['Duration'];?>);
 </script>
 </body>

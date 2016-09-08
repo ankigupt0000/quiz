@@ -48,7 +48,7 @@
 	echo "Number of correct answers: $correct <br/>";
 	echo "Number of incorrect answers: $incorrect <br/>";
 	echo "Number of unattempted questions: $unattempted <br/>";
-	echo "<a href='QuestionShow.php'>Reattempt Quiz</a>";
+	echo "<a href='QuestionShow.php'>Home Page</a>";
 	//echo(round($correct/($correct+$incorrect)*100,2));
 ?>
 </div>
