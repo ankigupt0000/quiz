@@ -8,7 +8,7 @@
 		$sql="update quiz set Active=1 where QuizId=".$quizid;
 		$database_obj->query($sql);
 	}
-	function getQuizName($quizid)
+	function getQuizName()
 	{
 		$database_obj=connectDB();
 		$sql="select QuizName from quiz where Active=1";
