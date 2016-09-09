@@ -38,7 +38,7 @@ session_start();
 					<span class='error' id='val_name'></span>
 					</p>
 					<p>
-					<label for="desc">Description</label>
+					<label for="desc">Instructions</label>
 					<textarea type="text" name="desc" id="desc" onblur='' >
 					<?php if(isset($_SESSION['desc'])){echo $_SESSION['desc']; } ?>
 					</textarea>

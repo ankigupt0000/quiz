@@ -37,7 +37,7 @@ session_start();
 					<span class='error' id='val_name'></span>
 					</p>
 					<p>
-					<label for="desc">Description</label>
+					<label for="desc">Instructions</label>
 					<input type="text" name="desc" id="desc" onblur=''/>
 					<span class='error' id='val_desc'></span>
 					</p>
