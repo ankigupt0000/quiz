@@ -17,4 +17,13 @@
 			return $row['QuizName'];
 		}
 	}
+	function getQuizInstruction()
+	{
+		$database_obj=connectDB();
+		$sql="select Description from quiz where Active=1";
+		foreach($database_obj->query($sql) as $row)
+		{
+			return $row['Description'];
+		}
+	}
 ?>
