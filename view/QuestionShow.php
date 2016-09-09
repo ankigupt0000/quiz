@@ -31,7 +31,11 @@ body
 }
 .header {
 	font-size:30;
-	align:center;
+	float:left;
+}
+.header_right {
+	font-size:30;
+	float:right;
 }
 .fix {
 	position:fixed;
@@ -122,8 +126,10 @@ return i;
 <form action='../model/RecordedAnswer.php' method='post' name='quiz' id='quiz' onsubmit='' >
 <div id="clock" class="fix"></div>
 <fieldset>
-<div id="rollno" class="header">Welcome Student: <?php echo $_SESSION['rollno']; ?> </div>
-<div id="Name" class="header">Quiz: <?php echo $_SESSION['quizname']; ?> </div>
+<span id="rollno" class="header">Welcome Student: <?php echo $_SESSION['rollno']; ?> </span>
+<span id="Name" class="header_right">Quiz: <?php echo $_SESSION['quizname']; ?> </span> 
+<br/>
+<br/>
 <input type='hidden' name='date' id="date" />
 <?php    foreach($database_obj->query($sql) as $row )
     {
