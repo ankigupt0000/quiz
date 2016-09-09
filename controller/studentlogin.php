@@ -8,7 +8,7 @@
 	if(checkStudent($rollno, $password)==1)
 	{
 		$_SESSION['rollno']=$rollno;
-		header('Location: ../view/QuestionShow.php');
+		header('Location: ../view/Instructions.php');
 	}
 	else
 	{
