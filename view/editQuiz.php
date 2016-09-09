@@ -39,9 +39,9 @@ session_start();
 					</p>
 					<p>
 					<label for="desc">Description</label>
-					<input type="text" name="desc" id="desc" 
-					value="<?php if(isset($_SESSION['desc'])){echo $_SESSION['desc']; } ?>"
-					onblur='' />
+					<textarea type="text" name="desc" id="desc" onblur='' >
+					<?php if(isset($_SESSION['desc'])){echo $_SESSION['desc']; } ?>
+					</textarea>
 					<span class='error' id='val_desc'></span>
 					</p>
 					<p>
@@ -54,7 +54,6 @@ session_start();
 					<p class='submit'>
 					<input type='Submit' name='Submit' id='Submit' />
 					</p>						
-
 
 				</fieldset>
 			</form>
